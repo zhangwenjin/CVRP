@@ -10,4 +10,4 @@ class Customer:
         return "Idx: {0}, X: {1}, Y:{2}, Demand: {3}".format(self.idx, self.x, self.y, self.demand)
 
     def distance(self, other):
-        return math.sqrt(self.x ** 2 + self.y ** 2 - other.x ** 2 + other.y **2)
+        return math.sqrt(math.fabs((self.x - other.x) ** 2 + (self.y - other.y) ** 2))
