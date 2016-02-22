@@ -1,0 +1,25 @@
+The format of data files in all directories is as follows:
+
+Data files
+
+The first line contains the following information:
+
+m n t
+
+m: number of vehicles
+n: number of customers
+t: maximum load of a vehicle
+
+The next lines contain, for each customer, the following information:
+
+i x y 
+
+i: customer number
+x: x coordinate
+y: y coordinate
+
+The next lines contain, for each customer, the following information:
+
+i q
+i: customer number 
+q: demand
