@@ -12,5 +12,8 @@ class Customer:
     def distance(self, other):
         return math.sqrt(math.fabs((self.x - other.x) ** 2 + (self.y - other.y) ** 2))
 
+    def distance(self, x, y):
+        return math.sqrt(math.fabs((self.x - x) ** 2 + (self.y - y) ** 2))
+
     def set_demand(self, demand):
         self.demand = demand
