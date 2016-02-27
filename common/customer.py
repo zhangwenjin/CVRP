@@ -3,11 +3,8 @@ import math
 
 class Customer:
 
-    def __init__(self, idx, x, y, demand):
+    def __init__(self, idx, x, y, demand=0):
         (self.idx, self.x, self.y, self.demand) = (idx, x, y, demand)
-
-    def __init__(self, idx, x, y):
-        (self.idx, self.x, self.y, self.demand) = (idx, x, y, 0)
 
     def __str__(self):
         return "Idx: {0}, X: {1}, Y:{2}, Demand: {3}".format(self.idx, self.x, self.y, self.demand)
