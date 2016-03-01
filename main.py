@@ -1,5 +1,10 @@
 from common.reader import Reader
+from greedy.greedy3 import Greedy3
 from greedy.greedy2 import Greedy2
+from greedy.greedy4 import Greedy4
+from greedy.greedy5 import Greedy5
+from dynamic.dynamic import Dynamic
+
 from common.parameter import InputParameter
 from matplotlib import pyplot
 
@@ -10,12 +15,11 @@ def plot(x, y, color='b', marker='o'):
     pyplot.ylim(min(y) - 1, max(y) + 1)
 
 
-f = open('input/P/P-n65-k10=792.vrp', 'r')
+f = open('input/P/test.vrp', 'r')
 r = Reader(f)
 r.read()
 c = r.get_customers()
-for i in c:
-    print i
+
 
 x_points = []
 y_points = []
@@ -29,12 +33,6 @@ pyplot.show()
 
 print '---------------------------'
 input_param = InputParameter(c, r.get_depot(), r.get_vehicles_num(), r.get_maximum_load())
-greedy = Greedy2(input_param)
+greedy = Greedy5(input_param)
 last = greedy.run()
-summ = 0
-for i in c:
-    summ += i.demand
-
-print '==============='
-print summ
 
