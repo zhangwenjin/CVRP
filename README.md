@@ -7,6 +7,6 @@ Capacitated Vehicle Routing Problem (CVRP) Solution using Greedy and Dynamic app
 
 To run :
 
-```sh
+```
 python ./main.py [path/to/benchmark]
 ```
