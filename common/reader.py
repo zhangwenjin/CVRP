@@ -33,23 +33,24 @@ class Reader:
         self.customers_num = customers_num
         self.maximum_load = maximum_load
 
-        print(self.file.readline())
+        self.file.readline()
         for c in range(customers_num):
             line = self.file.readline()
             (idx, x, y) = [t(s) for t, s in zip((int, float, float), line.split())]
             customer = Customer(idx, x, y)
             self.customers.append(customer)
-        print(self.file.readline())
+        self.file.readline()
         for c in range(customers_num):
             line = self.file.readline()
             (idx, demand) = [t(s) for t, s in zip((int, float), line.split())]
             self.customers[c].set_demand(demand)
-        print(self.file.readline())
-        x = int(self.file.readline())
-        y = int(self.file.readline())
+        self.file.readline()
+        # x = int(self.file.readline())
+        # y = int(self.file.readline())
 
-        self.depot = (x, y)
-        print (self.file.readline())
+        self.depot = (self.customers[0].x, self.customers[0].y)
+        # del self.customers[0]
+        self.file.readline()
 
 
 
